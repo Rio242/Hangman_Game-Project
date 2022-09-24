@@ -16,15 +16,34 @@ print(chosen_word)
 
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
 
+# for lop to generate list with blanks from chosen word 
+blank_word = []
+for b in chosen_word:
+    blank_word.append('_')
+print(blank_word)
+
+#convert word string to its own list
+chosenword_list = list(chosen_word)
+print(chosenword_list)
+#input to ask user to guess
 user = input("Please guess a letter").lower()
+
 
 #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
 
 #Mario- user gets 6 attempts 
-# for loop 
+
+# for loop to check if guessed letter matches in word. Then if statement is included to replace the blank with letter if correct  
+
+
+
 for n in chosen_word:
     
     if n == user:
-        print("Right")
+        location = chosenword_list.index(n)
+        blank_word[location] = user
+        print(n)
     else:
         print("Wrong")
+
+print(blank_word)
