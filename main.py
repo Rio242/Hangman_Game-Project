@@ -5,6 +5,8 @@ word_list = ["aardvarka", "baboon", "camel", "lover", "mango"]
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 
 import random
+
+#function to select random word from list above 
 chosen_word= random.choice(word_list)
 print(chosen_word)
 #Below is what I would you in a loop and unspecified number of entries in list 
