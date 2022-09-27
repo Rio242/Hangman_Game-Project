@@ -26,7 +26,7 @@ print(blank_word)
 
 #convert word string to its own list
 chosenword_list = list(chosen_word)
-print(chosenword_list)
+#print(chosenword_list)
 
 #while loop 
 lives = 6
@@ -50,10 +50,10 @@ while (blank_word != chosenword_list):
         if n == user:
             location = chosenword_list.index(n)
             blank_word[location] = user
-            print("")
+            #print("")
         else:
             wrong += 1    
-            print("Wrong")
+            #print("Wrong")
     #if statement to keep track of lives 
     if wrong == len(chosen_word):
         lives -=1 
