@@ -30,7 +30,7 @@ print(chosenword_list)
 
 #while loop 
 lives = 6
-while blank_word != chosenword_list: 
+while (blank_word != chosenword_list): 
     
 #input to ask user to guess
     user = input("Please guess a letter").lower()
@@ -57,8 +57,9 @@ while blank_word != chosenword_list:
     #if statement to keep track of lives 
     if wrong == len(chosen_word):
         lives -=1 
-        print(f"You can {lives} lives left")
-
+        print(f"You have {lives} lives left")
+        if lives == 0:
+            break
         
     print(blank_word) # stays
 
