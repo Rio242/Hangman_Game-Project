@@ -45,11 +45,12 @@ while (blank_word != chosenword_list):
 
     
     wrong = 0
-    for n in chosen_word:
-    
-        if n == user:
-            location = chosenword_list.index(n)
-            blank_word[location] = user
+    #for n in chosen_word
+    for n in range(len(chosenword_list)):
+        
+        if chosenword_list[n] == user:#if n ==user
+            #location = chosenword_list.index(n)
+           blank_word[n] = user #blank_word[location] = user
             #print("")
         else:
             wrong += 1    
