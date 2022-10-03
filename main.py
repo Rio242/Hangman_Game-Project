@@ -8,7 +8,7 @@ import random
 
 #function to select random word from list above 
 chosen_word = random.choice(word_list)
-print(chosen_word)
+print(f'The chosen word is:{chosen_word}')
 #Below is what I would you in a loop and unspecified number of entries in list 
 #num_words =  len(word_list)-1 
 
@@ -43,7 +43,7 @@ while (blank_word != chosenword_list):
 
 # for loop to check if guessed letter matches in word. Then if statement is included to replace the blank with letter if correct  
 
-
+    
     wrong = 0
     for n in chosen_word:
     
@@ -57,11 +57,15 @@ while (blank_word != chosenword_list):
     #if statement to keep track of lives 
     if wrong == len(chosen_word):
         lives -=1 
-        print(f"You have {lives} lives left")
+        print(f"Wrong you have {lives} lives left")
         if lives == 0:
             break
-        
+            
     print(blank_word) # stays
+    
+if blank_word == chosenword_list:
 
-print("Game Over")
-
+    print("You won")
+elif lives == 0:
+    print("Game over, you ran out of lives ")
+        
