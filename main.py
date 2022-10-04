@@ -31,12 +31,13 @@ chosenword_list = list(chosen_word)
 
 #while loop 
 art = 0
+print(stages[0])
 lives = 6
 while (blank_word != chosenword_list): 
     
 #input to ask user to guess
     user = input("Please guess a letter").lower()
-
+    
 
 #TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
 
