@@ -1,9 +1,10 @@
 #Step 1 
 
-word_list = ["aardvarka", "baboon", "camel", "lover", "mango"]
+#word_list = ["aardvarka", "baboon", "camel", "lover", "mango"]
 
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-
+from hangman_words import word_list
+from hangman_art import stages
 import random
 
 #function to select random word from list above 
@@ -29,6 +30,7 @@ chosenword_list = list(chosen_word)
 #print(chosenword_list)
 
 #while loop 
+art = 0
 lives = 6
 while (blank_word != chosenword_list): 
     
@@ -56,9 +58,14 @@ while (blank_word != chosenword_list):
             wrong += 1    
             #print("Wrong")
     #if statement to keep track of lives 
+          
     if wrong == len(chosen_word):
         lives -=1 
-        print(f"Wrong you have {lives} lives left")
+        print(f"Wrong")
+        art += 1
+        print(stages[art])
+        
+        
         if lives == 0:
             break
             
